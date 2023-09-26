@@ -7,7 +7,15 @@ Utilizaremos la imagen de Apache, tag 2.4. Usa Visual Studio Code y Docker junto
 ---
 
 1. Descarga la imagen 'httpd' y comprueba que está en tu equipo.
+
+$ docker pull httpd --> Para descargar la imagen.
+
+$ docker image ls --> Para comprobar que la imagen esá en el equipo.
+
 2. Crea un contenedor con el nombre 'dam_web1'.
+
+$ docker run -d --name dam_web1 httpd
+
 3. Si quieres poder acceder desde el navegador de tu equipo, ¿que debes hacer?.
 4. Utiliza bind mount para que el directorio del apache2 'htdocs' este montado un directorio que tu elijas.
 Utiliza -v "$PWD"/htdocs:/usr/local/apache2/htdocs/
