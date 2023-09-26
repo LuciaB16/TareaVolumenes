@@ -17,6 +17,13 @@ $ docker image ls --> Para comprobar que la imagen esá en el equipo.
 $ docker run -d --name dam_web1 httpd
 
 3. Si quieres poder acceder desde el navegador de tu equipo, ¿que debes hacer?.
+
+$ docker run -dit --name dam_web1 -p 8080:80 httpd:2.4
+
+$ ip address --> 10.0.9.15
+
+Pongo en el navegador 10.0.9.15:8080 y veo que funciona.
+
 4. Utiliza bind mount para que el directorio del apache2 'htdocs' este montado un directorio que tu elijas.
 Utiliza -v "$PWD"/htdocs:/usr/local/apache2/htdocs/
 5. Realiza un 'hola mundo' en html (usa Code) y comprueba que accedes desde el navegador.
