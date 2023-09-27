@@ -18,6 +18,8 @@ Utilizaremos la imagen de Apache, tag 2.4. Usa Visual Studio Code y Docker junto
 
 **3. Si quieres poder acceder desde el navegador de tu equipo, ¿que debes hacer?.**
 
+Antes de lanzar este comando, debo borrar el contenedor si está iniciado.
+
 `$ docker run -dit --name dam_web1 -p 8080:80 httpd:2.4` -> Con este comando mapeo el puerto del host con el puerto del contenedor.
 
 `$ ip address` -> Muestra la dirección IP de mi equipo, que es *10.0.9.15*
