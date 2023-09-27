@@ -52,3 +52,5 @@ http://localhost:8080
 Comprobamos que en ambos aparece 'Hola mundo'
 
 8. Realiza modificaciones de la página y comprueba que los dos servidores 'sirven' la misma página
+
+Efectivamente, haciendo modificaciones en el html, vemos que aparecen en los dos servidores.
