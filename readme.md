@@ -42,7 +42,13 @@ Modificamos el html del archivo index.html y escribimos 'hola mundo'. Posteriorm
 10.0.9.15:8080 y nos aparece 'hola mundo'
 
 6. Crea otro contenedor 'dam_web2' con el mismo volumen y a otro puerto, por ejemplo 9080.
+
+$ docker run -dit --name dam_web2 -p 9080:80 -v /home/dam2/Documentos/SXE/APACHE/htdocs:/usr/local/apache2/htdocs/ httpd:2.4
+
 7. Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:
 http://localhost:9080 
-http://localhost:8000
+http://localhost:8080
+
+Comprobamos que en ambos aparece 'Hola mundo'
+
 8. Realiza modificaciones de la página y comprueba que los dos servidores 'sirven' la misma página
