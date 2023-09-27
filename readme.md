@@ -26,7 +26,21 @@ Pongo en el navegador 10.0.9.15:8080 y veo que funciona.
 
 4. Utiliza bind mount para que el directorio del apache2 'htdocs' este montado un directorio que tu elijas.
 Utiliza -v "$PWD"/htdocs:/usr/local/apache2/htdocs/
+
+Ya tenemos montado el directorio htdocs en apache2 de tareas anteriores.
+
+Para mapear los puertos del contenedor y el directorio, lanzamos el siguiente comando:
+
+$ docker run -dit --name dam_web1 -p 8080:80 -v /home/dam2/Documentos/SXE/APACHE/htdocs:/usr/local/apache2/htdocs/ httpd:2.4
+
+Previamente a esto hay que borrar el contenedor para que funcione la ejecución.
+
 5. Realiza un 'hola mundo' en html (usa Code) y comprueba que accedes desde el navegador.
+
+Modificamos el html del archivo index.html y escribimos 'hola mundo'. Posteriormente lo comprobamos en el navegador, escribiendo lo siguiente:
+
+10.0.9.15:8080 y nos aparece 'hola mundo'
+
 6. Crea otro contenedor 'dam_web2' con el mismo volumen y a otro puerto, por ejemplo 9080.
 7. Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:
 http://localhost:9080 
